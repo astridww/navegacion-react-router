@@ -1,10 +1,11 @@
 import React from "react";
  
-import DataTestForm from "../components/DataTestForm";
-import DataTestList from "../components/DataTestList";
-import useDataTest from "../hooks/useDataTest";
+
+import useDataTest from "../hooks/useDateTestMusic";
+import DataTestListMusic from "../components/DataTestListMusic";
+import DataTestForm from "../components/DataTestFormMusic";
  
-const Contact = () => {
+const Music = () => {
   const {
     activeTab,
     setActiveTab,
@@ -34,11 +35,11 @@ const Contact = () => {
             Data Test CRUD
           </p>
           <h1 className="mt-3 text-3xl font-bold sm:text-4xl">
-            Music ahora funciona como CRUD para la API remota
+            Contact ahora funciona como CRUD para la API remota
           </h1>
           <p className="mt-3 max-w-3xl text-sm text-slate-300 sm:text-base">
             Puedes crear, editar, eliminar y volver a cargar los registros con
-            nombre de canción, cantante y nacionalidad desde la API de Retool.
+            nombre y edad desde la API de Retool.
           </p>
  
           <div className="mt-6 flex flex-wrap gap-3">
@@ -83,7 +84,7 @@ const Contact = () => {
             message={message}
           />
         ) : (
-          <DataTestList
+          <DataTestListMusic
             dataTest={dataTest}
             loading={loading}
             error={error}
@@ -97,4 +98,4 @@ const Contact = () => {
   );
 };
  
-export default Contact;
+export default Music;
